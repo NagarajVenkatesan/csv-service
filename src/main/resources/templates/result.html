@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>Results</h2>
+
+<table border="1">
+    <tr>
+        <th>Col1</th>
+        <th>Col2</th>
+        <th>Status</th>
+    </tr>
+
+    <tr th:each="r : ${rows}">
+        <td th:text="${r.col1}"></td>
+        <td th:text="${r.col2}"></td>
+        <td th:text="${r.status}"></td>
+    </tr>
+</table>
+
+<br/>
+<a href="/download">Download CSV</a>
+
+</body>
+</html>
